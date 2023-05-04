@@ -25,6 +25,8 @@ const Home = ({ data }) => {
         return card.name.toLowerCase().includes(search.toLowerCase())
     });
 
+    console.log(filteredData);
+
     return (
         <>
             <Head>
@@ -70,7 +72,6 @@ export async function getStaticProps() {
         const data = await response.json();
         return data;
     };
-
 
     const downloadImage = async (url, filename, API_KEY, API_TOKEN) => {
         try {

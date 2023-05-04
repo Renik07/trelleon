@@ -56,7 +56,7 @@ export const Cards = ({ data, scrollPosition }) => {
                             <div className="item-content">
                                 <div className="item-head">
                                     <div className={card.nameBoard == 'CASINO' ? 'labelCasino' : 'labelBook'}>{card.nameBoard}</div>
-                                    <div className="date">{card.attachments[0] && card.attachments[0].date ? card.attachments[0].date.slice(0, 10) : "date"}</div>
+                                    <div className="date">{card.attachments && card.attachments[card.attachments.length - 1].date ? card.attachments[card.attachments.length - 1].date.slice(0, 10) : "date"}</div>
                                     <div className="author">by {card.members[0] && card.members[0].fullName ? card.members[0].fullName : "name"} </div>
                                 </div>
                                 <h3 className="item-title">{card.name}</h3>
@@ -81,7 +81,7 @@ export const Cards = ({ data, scrollPosition }) => {
                                 <div className="modal-content">
                                     <div className="modal-head">
                                         <div className={card.nameBoard == 'CASINO' ? 'labelCasino' : 'labelBook'}>{card.nameBoard}</div>
-                                        <span className="modal-date date">{card.attachments[0] && card.attachments[0].date ? card.attachments[0].date.slice(0, 10) : "date"}</span>
+                                        <span className="modal-date date">{card.attachments && card.attachments[card.attachments.length - 1].date ? card.attachments[card.attachments.length - 1].date.slice(0, 10) : "date"}</span>
                                         <span className="modal-author author">by {card.members[0] && card.members[0].fullName ? card.members[0].fullName : "name"}</span>
                                         <a target="_blank" href={card.shortUrl} className="modal-link">
                                             <Image
