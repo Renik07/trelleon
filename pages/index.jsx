@@ -21,11 +21,17 @@ const Home = ({ data }) => {
         setSearch(event.target.value);
     }
     // 
-    const filteredData = data.filter(card => {
-        return card.name.toLowerCase().includes(search.toLowerCase())
-    });
-
-    console.log(filteredData);
+    const filteredData = data
+        // фильтрация карточек по названию
+        .filter(card => {
+            return card.name.toLowerCase().includes(search.toLowerCase())
+        })
+        // сортировка карточек по дате
+        .sort((a, b) => {
+            const dateA = new Date(a.attachments[a.attachments.length - 1].date.slice(0, 10));
+            const dateB = new Date(b.attachments[b.attachments.length - 1].date.slice(0, 10));
+            return dateB - dateA;
+        });
 
     return (
         <>
