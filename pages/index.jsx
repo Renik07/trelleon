@@ -115,7 +115,7 @@ export async function getStaticProps() {
                 url: uploadData.href,
                 headers: {
                     Authorization: `OAuth ${YANDEX_DISK_TOKEN}`,
-                    'Content-Type': 'image/jpeg', // Предполагается, что изображение является JPEG-файлом
+                    'Content-Type': 'image/jpeg', 
                 },
                 data: Buffer.from(buffer),
             });
@@ -194,7 +194,7 @@ export async function getStaticProps() {
             props: {
                 data: updatedAllCards,
             },
-            revalidate: 900,
+            revalidate: 1800,
         };
     } catch (error) {
         console.error('Ошибка при получении карточек колонки:', error);
