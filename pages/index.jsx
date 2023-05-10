@@ -194,7 +194,7 @@ export async function getStaticProps() {
             props: {
                 data: updatedAllCards,
             },
-            revalidate: 1800,
+            revalidate: 600,
         };
     } catch (error) {
         console.error('Ошибка при получении карточек колонки:', error);
