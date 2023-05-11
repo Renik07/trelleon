@@ -103,7 +103,7 @@ export async function getStaticProps() {
                     'Content-Type': 'application/json',
                 },
                 params: {
-                    path: `Leon/${filename}`, // Путь, по которому вы хотите сохранить изображение на Яндекс.Диске
+                    path: `Leon1200/${filename}`, // Путь, по которому вы хотите сохранить изображение на Яндекс.Диске
                     overwrite: false, // Заменить существующий файл, если он уже существует
                 },
             });
@@ -127,7 +127,7 @@ export async function getStaticProps() {
     // 5. 
     const getImageUrl = async (card, API_KEY, API_TOKEN) => {
         // Проверяем наличие изображения на Яндекс.Диске
-        const checkUrl = `https://cloud-api.yandex.net/v1/disk/resources?path=Leon/${card.id}.jpg`;
+        const checkUrl = `https://cloud-api.yandex.net/v1/disk/resources?path=Leon1200/${card.id}.jpg`;
         try {
             const checkResponse = await axios({
                 method: 'GET',
@@ -149,7 +149,7 @@ export async function getStaticProps() {
 
         // Если изображения нет на Яндекс.Диске, загружаем его
         await downloadImage(
-            `https://api.trello.com/${card.cover.scaled[4].url.slice(19)}`,
+            `https://api.trello.com/${card.cover.scaled[5].url.slice(19)}`,
             `${card.id}.jpg`,
             API_KEY,
             API_TOKEN
