@@ -1,10 +1,10 @@
 .modal {
-	z-index: 100;
+  z-index: 100;
 }
 
 .modal-content {
   padding: 30px 25px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
 }
 
 .modal-head {
@@ -27,6 +27,7 @@
 
 .modal-desc {
   max-width: 1000px;
+  font-size: 12px;
 }
 
 .modal-link {
@@ -41,7 +42,7 @@
 }
 
 .modal-close {
-	z-index: 500;
+  z-index: 500;
 }
 
 /* modal */
@@ -53,9 +54,15 @@
 }
 
 .react-responsive-modal-overlay {
-	background: rgba(0, 0, 0, 0.8) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .react-responsive-modal-closeButton svg {
-	fill: #fff;
+  fill: #fff;
+}
+
+@media only screen and (min-device-pixel-ratio: 2) {
+  .modal-desc {
+    font-size: 14px;
+  }
 }
