@@ -49,7 +49,7 @@ const Home = ({ data }) => {
                         src={logo}
                         alt="Logo Leon"
                     />
-                    <input placeholder='Поиск' className='input' type='text' value={search} onChange={handleSearch} />
+                    <input placeholder='Поиск...' className='input' type='text' value={search} onChange={handleSearch} />
                     <div className="grid">
                         <Cards data={filteredData} />
                     </div>
